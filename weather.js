@@ -54,7 +54,7 @@ async function getApi() {
     document.getElementById("pressure_mb").innerHTML = `${pressure_mb} hPa`;
 
     let wind_mph = result.current.wind_mph;
-    document.getElementById("wind_mph").innerHTML = `${wind_mph} km/h`;
+    document.getElementById("wind_mph").innerHTML = `${Math.round(wind_mph)} km/h`;
 
     let uv = result.current.uv;
     document.getElementById("Uv").innerHTML = `${uv}`;
@@ -84,21 +84,21 @@ async function getApi() {
     const sunny = "sunny";
 
     if (weather.includes(rain)) {
-        mainimg.src = "./icons/clear 3.svg";
+        mainimg.src = "./icons/drizzle 1.svg";
         maintext.innerHTML = Rain;
     }
     if (weather.includes(Rain)) {
-        mainimg.src = "./icons/clear 3.svg";
+        mainimg.src = "./icons/drizzle 1.svg";
         maintext.innerHTML = Rain;
     }
 
     if (weather.includes(Sunny)) {
-        mainimg.src = "./icons/drizzle 1.svg";
-        maintext.innerHTML = Rain;
+        mainimg.src = "./icons/clear 3.svg";
+        maintext.innerHTML = Sunny;
     }
     if (weather.includes(sunny)) {
-        mainimg.src = "./icons/drizzle 1.svg";
-        maintext.innerHTML = Rain;
+        mainimg.src = "./icons/clear 3.svg";
+        maintext.innerHTML = Sunny;
     }
 
 
