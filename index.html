@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="light-mode.css" id="theme">
+    <title>Weather width api</title>
+</head>
+
+<body class="bg-light">
+
+    <div class="wr">
+
+        <nav class="row">
+            <div>
+                <label class="switch" id="switch">
+                    <input type="checkbox" id="thmSw">
+                    <span class="slider"></span>
+                </label>
+                <p id="thmSts">Light Mode</p>
+            </div>
+
+            <div class="search">
+                <button id="submit-btt"><img onclick="getApi()" src="./icons/search 1.svg" alt="error"></button>
+                <input type="text" placeholder="Search for your preffered city..." class="city_line" name="search"
+                    id="city_line" value="">
+            </div>
+
+            <button class="location" onclick="getLocation()"><img src="./icons/current location icon.svg" alt="error">
+                <p>Current Location</p>
+            </button>
+        </nav>
+
+        <div class="m-w">
+            <section class="main">
+                <h3 id="city_val">Athens</h3>
+                <h1 id="time_line">09:03</h1>
+                <p id="date_line">Thursday, 31 Aug</p>
+            </section>
+
+            <section class="weather-details">
+                <div class="main-details">
+                    <h2 id="grades">24°C</h2>
+
+                    <div class="f-l">
+                        <p>Feels like:</p>
+                        <p id="grades-f-l">22°C</p>
+                    </div>
+
+                    <div class="sun-t">
+                        <img src="./icons/sunrise-white 1.svg" alt="error" id="sunrise">
+                        <div>
+                            <h5>Sunrise</h5>
+                            <p id="Sunrise">06:37 AM</p>
+                        </div>
+                    </div>
+
+                    <div class="sun-t">
+                        <img src="./icons/sunset-white 1.png" alt="error" id="sunset">
+                        <div>
+                            <h5>Sunset</h5>
+                            <p id="Sunset">20:37 AM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="weather">
+                    <img width="150px" id="Main_w_img" src="./img/clear 1.png" alt="error">
+                    <h3 id="Main_w_text">Sunny</h3>
+                </div>
+
+                <div class="extra-details">
+                    <div class="row">
+                        <div class="icn">
+                            <img width="60px" height="60px" src="./icons/humidity 1.svg" alt="error" id="humidity">
+                            <p id="Humidity">41%</p>
+                            <p class="p-name">Humidity</p>
+                        </div>
+
+                        <div class="icn">
+                            <img width="60px" height="60px" src="./icons/wind 1.svg" alt="error" id="wind">
+                            <p id="wind_mph">2km/h</p>
+                            <p class="p-name">Wind</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="icn">
+                            <img width="60px" height="60px" src="./icons/pressure-white 1.svg" id="pressure" alt="error">
+                            <p id="pressure_mb">997hPa</p>
+                            <p class="p-name">Pressure</p>
+                        </div>
+
+                        <div class="icn">
+                            <img width="60px" height="60px" src="./icons/uv-white 1.svg" alt="error" id="uv">
+                            <p id="Uv">8</p>
+                            <p class="p-name">UV</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+        <div class="m-w">
+
+            <section class="forecast-day">
+                <h3>5 Days Forecast:</h3>
+
+                <div class="d-frc">
+                    <img id="d_frc_1_img" width="60px" height="60px" src="./icons/clouds 1.svg" alt="error">
+                    <p id="d_frc_1_C" class="grades-frc">20°C</p>
+                    <p id="d_frc_1_date">Friday, 1 Sep</p>
+                </div>
+
+                <div class="d-frc">
+                    <img id="d_frc_2_img" width="60px" height="60px" src="./icons/mist 1.svg" alt="error">
+                    <p id="d_frc_2_C" class="grades-frc">22°C</p>
+                    <p id="d_frc_2_date">Saturday, 2 Sep</p>
+                </div>
+
+                <div class="d-frc">
+                    <img id="d_frc_3_img" width="60px" height="60px" src="./icons/clear 2.svg" alt="error">
+                    <p id="d_frc_3_C" class="grades-frc">27°C</p>
+                    <p id="d_frc_3_date">In 2 days</p>
+                </div>
+
+                <div class="d-frc">
+                    <img id="d_frc_4_img" width="60px" height="60px" src="./icons/drizzle 1.svg" alt="error">
+                    <p id="d_frc_4_C" class="grades-frc">18°C</p>
+                    <p id="d_frc_4_date">In 3 days</p>
+                </div>
+
+                <div class="d-frc">
+                    <img id="d_frc_5_img" width="60px" height="60px" src="./icons/rain 1.svg" alt="error">
+                    <p id="d_frc_5_C" class="grades-frc">16°C</p>
+                    <p id="d_frc_5_date">In 4 days</p>
+                </div>
+            </section>
+
+            <section class="forecast-h">
+                <h3>Hourly Forecast:</h3>
+
+                <div class="times">
+                    <div class="day">
+                        <p class="h-f">06:00</p>
+                        <img id="AM6_img" width="70px" height="70px" src="./icons/clear 3.svg" alt="error">
+                        <p id="AM6_C">26°C</p>
+                        <img id="AM6_wind_img" src="./icons/navigation 1.svg" alt="error">
+                        <p id="AM6_wind">3km/h</p>
+                    </div>
+
+                    <div class="day">
+                        <p class="h-f">10:00</p>
+                        <img width="70px" height="70px" id="AM10_img" src="./icons/clear 3.svg" alt="error">
+                        <p id="AM10_C">27°C</p>
+                        <img src="./icons/navigation 2.png" alt="error">
+                        <p id="AM10_wind">2km/h</p>
+                    </div>
+
+                    <div class="day">
+                        <p class="h-f">14:00</p>
+                        <img width="70px" height="70px" id="PM14_img" src="./icons/clouds 2.png" alt="error">
+                        <p id="PM14_C">27°C</p>
+                        <img src="./icons/navigation 1.svg" alt="error">
+                        <p id="PM14_wind">2km/h</p>
+                    </div>
+
+                    <div class="night">
+                        <p class="h-f">18:00</p>
+                        <img id="PM18_img" width="70px" height="70px" src="./icons/clouds 2.png" alt="error">
+                        <p id="PM18_C">25°C</p>
+                        <img src="./icons/navigation 4.png" alt="error">
+                        <p id="PM18_wind">3km/h</p>
+                    </div>
+
+                    <div class="night">
+                        <p class="h-f">22:00</p>
+                        <img id="PM22_img" width="70px" height="70px" src="./icons/clear 3.svg" alt="error">
+                        <p id="PM22_C">22°C</p>
+                        <img src="./icons/navigation 1.svg" alt="error">
+                        <p id="PM22_wind">3km/h</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="./weather.js"></script>
+    <script src="./base.js"></script>
+</body>
+
+</html>

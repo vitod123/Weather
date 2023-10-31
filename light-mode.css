@@ -1,0 +1,35 @@
+
+body{
+    color: #292929;
+}
+
+.search{
+    background-color: #D9D9D9;
+}
+
+section{
+    background-color: #D9D9D9;
+}
+
+h2{
+    color: transparent;    
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(45deg, #292929, transparent);
+}
+
+.day{
+    background-image: linear-gradient(150deg, #F88508, transparent);
+    width: fit-content;
+    border-radius: 40px;
+}
+
+.night{
+    background-image: linear-gradient(150deg, #443D64, transparent);
+    width: fit-content;
+    border-radius: 40px;
+}
+
+.city_line{
+    background-color: #D9D9D9;
+}
