@@ -353,3 +353,67 @@ p {
 .city_line {
     outline: none;
 }
+
+.rotate0{
+    rotate: 0deg;
+}
+
+.rotate22{
+    rotate: 22deg;
+}
+
+.rotate45{
+    rotate: 45deg;
+}
+
+.rotate68{
+    rotate: 68deg;
+}
+
+.rotate90{
+    rotate: 90deg;
+}
+
+.rotate112{
+    rotate: 112deg;
+}
+
+.rotate135{
+    rotate: 135deg;
+}
+
+.rotate158{
+    rotate: 158deg;
+}
+
+.rotate180{
+    rotate: 180deg;
+}
+
+.rotate202{
+    rotate: 202deg;
+}
+
+.rotate225{
+    rotate: 225deg;
+}
+
+.rotate248{
+    rotate: 248deg;
+}
+
+.rotate270{
+    rotate: 270deg;
+}
+
+.rotate292{
+    rotate: 292deg;
+}
+
+.rotate315{
+    rotate: 315deg;
+}
+
+.rotate338{
+    rotate: 338;
+}

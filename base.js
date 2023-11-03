@@ -72,8 +72,17 @@ function showPosition(position) {
   fetch(url)
     .then(response => response.json())
     .then(data => {
-      let city = data.address.city;
-      city_line.value = city;
+      if (data.address.city) {
+        city_line.value = data.address.city;
+      } else if (data.address.town) {
+        city_line.value = data.address.town;
+      } else if (data.address.village) {
+        city_line.value = data.address.village;
+      } else if (data.address.hamlet) {
+        city_line.value = data.address.hamlet;
+      }else {
+        alert("Sorry, your city could not be found")
+      }
 
     })
     .catch(error => {

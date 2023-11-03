@@ -1,4 +1,6 @@
 
+alert("Enter your city and click search.");
+
 async function getApi() {
     let a = document.getElementById("city_line").value;
     let data = `https://api.weatherapi.com/v1/forecast.json?key=8b7cab1863ae4b3d83f185637231109&q=${a}&days=6&aqi=no&alerts=no`;
@@ -339,45 +341,45 @@ async function getApi() {
     let w_h_6 = result.forecast.forecastday[0].hour[6].condition.text;
 
 
-    if(w_h_6.includes(rain)){
+    if (w_h_6.includes(rain)) {
         AM6_img.src = "./icons/drizzle 1.svg";
     };
-    if(w_h_6.includes(Rain)){
+    if (w_h_6.includes(Rain)) {
         AM6_img.src = "./icons/drizzle 1.svg";
     };
 
-    if(w_h_6.includes(Sunny)){
+    if (w_h_6.includes(Sunny)) {
         AM6_img.src = "./icons/clear 3.svg";
     };
-    if(w_h_6.includes(sunny)){
+    if (w_h_6.includes(sunny)) {
         AM6_img.src = "./icons/clear 3.svg";
     };
 
-    if(w_h_6.includes(snow)){
+    if (w_h_6.includes(snow)) {
         AM6_img.src = "./icons/rain 1.svg";
     };
-    if(w_h_6.includes(Snow)){
+    if (w_h_6.includes(Snow)) {
         AM6_img.src = "./icons/rain 1.svg";
     };
 
-    if(w_h_6.includes(clear)){
+    if (w_h_6.includes(clear)) {
         AM6_img.src = "./icons/clear 3.svg";
     };
-    if(w_h_6.includes(Clear)){
+    if (w_h_6.includes(Clear)) {
         AM6_img.src = "./icons/clear 3.svg";
     };
 
-    if(w_h_6.includes(clouds)){
+    if (w_h_6.includes(clouds)) {
         AM6_img.src = "./icons/clouds 1.svg";
     };
-    if(w_h_6.includes(Clouds)){
+    if (w_h_6.includes(Clouds)) {
         AM6_img.src = "./icons/clouds 1.svg";
     };
 
-    if(w_h_6.includes(cloudy)){
+    if (w_h_6.includes(cloudy)) {
         AM6_img.src = "./icons/clouds 2.png";
     };
-    if(w_h_6.includes(Cloudy)){
+    if (w_h_6.includes(Cloudy)) {
         AM6_img.src = "./icons/clouds 2.png";
     };
 
@@ -390,38 +392,38 @@ async function getApi() {
 
     let w_h_10 = result.forecast.forecastday[0].hour[10].condition.text;
 
-    if(w_h_10.includes(rain)){
+    if (w_h_10.includes(rain)) {
         AM10_img.src = "./icons/drizzle 1.svg";
     };
-    if(w_h_10.includes(Rain)){
+    if (w_h_10.includes(Rain)) {
         AM10_img.src = "./icons/drizzle 1.svg";
     };
 
-    if(w_h_10.includes(snow)){
+    if (w_h_10.includes(snow)) {
         AM10_img.src = "./icons/rain 1.svg";
     };
-    if(w_h_10.includes(Snow)){
+    if (w_h_10.includes(Snow)) {
         AM10_img.src = "./icons/rain 1.svg";
     };
 
-    if(w_h_10.includes(clear)){
+    if (w_h_10.includes(clear)) {
         AM10_img.src = "./icons/clear 3.svg";
     };
-    if(w_h_10.includes(Clear)){
+    if (w_h_10.includes(Clear)) {
         AM10_img.src = "./icons/clear 3.svg";
     };
 
-    if(w_h_10.includes(clouds)){
+    if (w_h_10.includes(clouds)) {
         AM10_img.src = "./icons/clouds 1.svg";
     };
-    if(w_h_10.includes(Clouds)){
+    if (w_h_10.includes(Clouds)) {
         AM10_img.src = "./icons/clouds 1.svg";
     };
 
-    if(w_h_10.includes(cloudy)){
+    if (w_h_10.includes(cloudy)) {
         AM10_img.src = "./icons/clouds 2.png";
     };
-    if(w_h_10.includes(Cloudy)){
+    if (w_h_10.includes(Cloudy)) {
         AM10_img.src = "./icons/clouds 2.png";
     };
 
@@ -432,40 +434,40 @@ async function getApi() {
     let PM14_wind = document.getElementById("PM14_wind").innerHTML = `${Math.round(result.forecast.forecastday[0].hour[14].wind_kph)} km/h`;
 
     let w_h_14 = result.forecast.forecastday[0].hour[14].condition.text;
-    
 
-    if(w_h_14.includes(rain)){
+
+    if (w_h_14.includes(rain)) {
         PM14_img.src = "./icons/drizzle 1.svg";
     };
-    if(w_h_14.includes(Rain)){
+    if (w_h_14.includes(Rain)) {
         PM14_img.src = "./icons/drizzle 1.svg";
     };
 
-    if(w_h_14.includes(snow)){
+    if (w_h_14.includes(snow)) {
         PM14_img.src = "./icons/rain 1.svg";
     };
-    if(w_h_14.includes(Snow)){
+    if (w_h_14.includes(Snow)) {
         PM14_img.src = "./icons/rain 1.svg";
     };
 
-    if(w_h_14.includes(clear)){
+    if (w_h_14.includes(clear)) {
         PM14_img.src = "./icons/clear 3.svg";
     };
-    if(w_h_14.includes(Clear)){
+    if (w_h_14.includes(Clear)) {
         PM14_img.src = "./icons/clear 3.svg";
     };
 
-    if(w_h_14.includes(clouds)){
+    if (w_h_14.includes(clouds)) {
         PM14_img.src = "./icons/clouds 1.svg";
     };
-    if(w_h_14.includes(Clouds)){
+    if (w_h_14.includes(Clouds)) {
         PM14_img.src = "./icons/clouds 1.svg";
     };
 
-    if(w_h_14.includes(cloudy)){
+    if (w_h_14.includes(cloudy)) {
         PM14_img.src = "./icons/clouds 2.png";
     };
-    if(w_h_14.includes(Cloudy)){
+    if (w_h_14.includes(Cloudy)) {
         PM14_img.src = "./icons/clouds 2.png";
     };
 
@@ -476,40 +478,40 @@ async function getApi() {
     let PM18_wind = document.getElementById("PM18_wind").innerHTML = `${Math.round(result.forecast.forecastday[0].hour[18].wind_kph)} km/h`;
 
     let w_h_18 = result.forecast.forecastday[0].hour[18].condition.text;
-    
 
-    if(w_h_18.includes(rain)){
+
+    if (w_h_18.includes(rain)) {
         PM18_img.src = "./icons/drizzle 1.svg";
     };
-    if(w_h_18.includes(Rain)){
+    if (w_h_18.includes(Rain)) {
         PM18_img.src = "./icons/drizzle 1.svg";
     };
 
-    if(w_h_18.includes(snow)){
+    if (w_h_18.includes(snow)) {
         PM18_img.src = "./icons/rain 1.svg";
     };
-    if(w_h_18.includes(Snow)){
+    if (w_h_18.includes(Snow)) {
         PM18_img.src = "./icons/rain 1.svg";
     };
 
-    if(w_h_18.includes(clear)){
+    if (w_h_18.includes(clear)) {
         PM18_img.src = "./icons/clear 3.svg";
     };
-    if(w_h_18.includes(Clear)){
+    if (w_h_18.includes(Clear)) {
         PM18_img.src = "./icons/clear 3.svg";
     };
 
-    if(w_h_18.includes(clouds)){
+    if (w_h_18.includes(clouds)) {
         PM18_img.src = "./icons/clouds 1.svg";
     };
-    if(w_h_18.includes(Clouds)){
+    if (w_h_18.includes(Clouds)) {
         PM18_img.src = "./icons/clouds 1.svg";
     };
 
-    if(w_h_18.includes(cloudy)){
+    if (w_h_18.includes(cloudy)) {
         PM18_img.src = "./icons/clouds 2.png";
     };
-    if(w_h_18.includes(Cloudy)){
+    if (w_h_18.includes(Cloudy)) {
         PM18_img.src = "./icons/clouds 2.png";
     };
 
@@ -520,47 +522,356 @@ async function getApi() {
     let PM22_wind = document.getElementById("PM22_wind").innerHTML = `${Math.round(result.forecast.forecastday[0].hour[22].wind_kph)} km/h`;
 
     let w_h_22 = result.forecast.forecastday[0].hour[22].condition.text;
-    
 
-    if(w_h_22.includes(rain)){
+
+    if (w_h_22.includes(rain)) {
         PM22_img.src = "./icons/drizzle 1.svg";
     };
-    if(w_h_22.includes(Rain)){
+    if (w_h_22.includes(Rain)) {
         PM22_img.src = "./icons/drizzle 1.svg";
     };
 
-    if(w_h_22.includes(snow)){
+    if (w_h_22.includes(snow)) {
         PM22_img.src = "./icons/rain 1.svg";
     };
-    if(w_h_22.includes(Snow)){
+    if (w_h_22.includes(Snow)) {
         PM22_img.src = "./icons/rain 1.svg";
     };
 
-    if(w_h_22.includes(clear)){
+    if (w_h_22.includes(clear)) {
         PM22_img.src = "./icons/clear 3.svg";
     };
-    if(w_h_18.includes(Clear)){
+    if (w_h_18.includes(Clear)) {
         PM22_img.src = "./icons/clear 3.svg";
     };
 
-    if(w_h_18.includes(clouds)){
+    if (w_h_18.includes(clouds)) {
         PM22_img.src = "./icons/clouds 1.svg";
     };
-    if(w_h_18.includes(Clouds)){
+    if (w_h_18.includes(Clouds)) {
         PM22_img.src = "./icons/clouds 1.svg";
     };
 
-    if(w_h_22.includes(cloudy)){
+    if (w_h_22.includes(cloudy)) {
         PM22_img.src = "./icons/clouds 2.png";
     };
-    if(w_h_22.includes(Cloudy)){
+    if (w_h_22.includes(Cloudy)) {
         PM22_img.src = "./icons/clouds 2.png";
     };
+
+
+    //робота с картинками ветра
+
+    let N = "N";
+    let NNF = "NNF";
+    let NE = "NE";
+    let ENE = "ENE";
+    let E = "E";
+    let ESE = "ESE";
+    let SE = "SE";
+    let SSE = "SSE";
+    let S = "S";
+    let SSW = "SSW";
+    let SW = "SW";
+    let WSW = "WSW";
+    let W = "W";
+    let WNW = "WNW";
+    let NW = "NW";
+    let NNW = "NNW";
+
+    let nwind6 = result.forecast.forecastday[0].hour[6].wind_dir;
+    let wind6 = document.getElementById("AM6_wind_img");
+
+    let nwind10 = result.forecast.forecastday[0].hour[10].wind_dir;
+    let wind10 = document.getElementById("AM10_wind_img");
+
+    let nwind14 = result.forecast.forecastday[0].hour[14].wind_dir;
+    let wind14 = document.getElementById("PM14_wind_img");
+
+    let nwind18 = result.forecast.forecastday[0].hour[18].wind_dir;
+    let wind18 = document.getElementById("PM18_wind_img");
+
+    let nwind22 = result.forecast.forecastday[0].hour[22].wind_dir;
+    let wind22 = document.getElementById("PM22_wind_img");
+
+
+
+
+    switch (nwind6) {
+        case N:
+            wind6.classList.add("rotate0")
+            break;
+        case NNF:
+            wind6.classList.add("rotate22")
+            break;
+        case NE:
+            wind6.classList.add("rotate45")
+            break;
+        case ENE:
+            wind6.classList.add("rotate68")
+            break;
+        case E:
+            wind6.classList.add("rotate90")
+            break;
+        case ESE:
+            wind6.classList.add("rotate112")
+            break;
+        case SE:
+            wind6.classList.add("rotate135")
+            break;
+        case SSE:
+            wind6.classList.add("rotate158")
+            break;
+        case S:
+            wind6.classList.add("rotate180")
+            break;
+        case SSW:
+            wind6.classList.add("rotate202")
+            break;
+        case SW:
+            wind6.classList.add("rotate225")
+            break;
+        case WSW:
+            wind6.classList.add("rotate248")
+            break;
+        case W:
+            wind6.classList.add("rotate270")
+            break;
+        case WNW:
+            wind6.classList.add("rotate292")
+            break;
+        case NW:
+            wind6.classList.add("rotate315")
+            break;
+        case NNW:
+            wind6.classList.add("rotate338")
+            break;
+        default:
+            break;
+    }
+
+
+    switch (nwind10) {
+        case N:
+            wind10.classList.add("rotate0")
+            break;
+        case NNF:
+            wind10.classList.add("rotate22")
+            break;
+        case NE:
+            wind10.classList.add("rotate45")
+            break;
+        case ENE:
+            wind10.classList.add("rotate68")
+            break;
+        case E:
+            wind10.classList.add("rotate90")
+            break;
+        case ESE:
+            wind10.classList.add("rotate112")
+            break;
+        case SE:
+            wind10.classList.add("rotate135")
+            break;
+        case SSE:
+            wind10.classList.add("rotate158")
+            break;
+        case S:
+            wind10.classList.add("rotate180")
+            break;
+        case SSW:
+            wind10.classList.add("rotate202")
+            break;
+        case SW:
+            wind10.classList.add("rotate225")
+            break;
+        case WSW:
+            wind10.classList.add("rotate248")
+            break;
+        case W:
+            wind10.classList.add("rotate270")
+            break;
+        case WNW:
+            wind10.classList.add("rotate292")
+            break;
+        case NW:
+            wind10.classList.add("rotate315")
+            break;
+        case NNW:
+            wind10.classList.add("rotate338")
+            break;
+        default:
+            break;
+    }
+
+
+    switch (nwind14) {
+        case N:
+            wind14.classList.add("rotate0")
+            break;
+        case NNF:
+            wind14.classList.add("rotate22")
+            break;
+        case NE:
+            wind14.classList.add("rotate45")
+            break;
+        case ENE:
+            wind14.classList.add("rotate68")
+            break;
+        case E:
+            wind14.classList.add("rotate90")
+            break;
+        case ESE:
+            wind14.classList.add("rotate112")
+            break;
+        case SE:
+            wind14.classList.add("rotate135")
+            break;
+        case SSE:
+            wind14.classList.add("rotate158")
+            break;
+        case S:
+            wind14.classList.add("rotate180")
+            break;
+        case SSW:
+            wind14.classList.add("rotate202")
+            break;
+        case SW:
+            wind14.classList.add("rotate225")
+            break;
+        case WSW:
+            wind14.classList.add("rotate248")
+            break;
+        case W:
+            wind14.classList.add("rotate270")
+            break;
+        case WNW:
+            wind14.classList.add("rotate292")
+            break;
+        case NW:
+            wind14.classList.add("rotate315")
+            break;
+        case NNW:
+            wind14.classList.add("rotate338")
+            break;
+        default:
+            break;
+    }
+
+
+    switch (nwind18) {
+        case N:
+            wind18.classList.add("rotate0")
+            break;
+        case NNF:
+            wind18.classList.add("rotate22")
+            break;
+        case NE:
+            wind18.classList.add("rotate45")
+            break;
+        case ENE:
+            wind18.classList.add("rotate68")
+            break;
+        case E:
+            wind18.classList.add("rotate90")
+            break;
+        case ESE:
+            wind18.classList.add("rotate112")
+            break;
+        case SE:
+            wind18.classList.add("rotate135")
+            break;
+        case SSE:
+            wind18.classList.add("rotate158")
+            break;
+        case S:
+            wind18.classList.add("rotate180")
+            break;
+        case SSW:
+            wind18.classList.add("rotate202")
+            break;
+        case SW:
+            wind18.classList.add("rotate225")
+            break;
+        case WSW:
+            wind18.classList.add("rotate248")
+            break;
+        case W:
+            wind18.classList.add("rotate270")
+            break;
+        case WNW:
+            wind18.classList.add("rotate292")
+            break;
+        case NW:
+            wind18.classList.add("rotate315")
+            break;
+        case NNW:
+            wind18.classList.add("rotate338")
+            break;
+        default:
+            break;
+    }
+
+
+    switch (nwind22) {
+        case N:
+            wind22.classList.add("rotate0")
+            break;
+        case NNF:
+            wind22.classList.add("rotate22")
+            break;
+        case NE:
+            wind22.classList.add("rotate45")
+            break;
+        case ENE:
+            wind22.classList.add("rotate68")
+            break;
+        case E:
+            wind22.classList.add("rotate90")
+            break;
+        case ESE:
+            wind22.classList.add("rotate112")
+            break;
+        case SE:
+            wind22.classList.add("rotate135")
+            break;
+        case SSE:
+            wind22.classList.add("rotate158")
+            break;
+        case S:
+            wind22.classList.add("rotate180")
+            break;
+        case SSW:
+            wind22.classList.add("rotate202")
+            break;
+        case SW:
+            wind22.classList.add("rotate225")
+            break;
+        case WSW:
+            wind22.classList.add("rotate248")
+            break;
+        case W:
+            wind22.classList.add("rotate270")
+            break;
+        case WNW:
+            wind22.classList.add("rotate292")
+            break;
+        case NW:
+            wind22.classList.add("rotate315")
+            break;
+        case NNW:
+            wind22.classList.add("rotate338")
+            break;
+        default:
+            break;
+    }
+
+
 
 
     // все
 };
 
-time_line
+
 
 
